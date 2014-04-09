@@ -1,5 +1,7 @@
 {
     "name": "cti/app",
+    "description": "Empty application",
+    "license": "MIT",    
     "require": {
         "cti/di": "*",
         "cti/direct": "*"
