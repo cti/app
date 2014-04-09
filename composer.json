@@ -1,0 +1,13 @@
+{
+    "name": "cti/app",
+    "require": {
+        "cti/di": "*",
+        "cti/direct": "*"
+    },
+    "authors": [
+        {
+            "name": "Dmitry.Krokhin",
+            "email": "nekufa@gmail.com"
+        }
+    ]
+}
