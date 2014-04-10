@@ -12,7 +12,7 @@ class Core
 
     function processWeb()
     {
-        $this->web->add('/', 'Application\Controller\DefaultController');
+        $this->web->add('/', 'Controller\DefaultController');
         $this->web->process();
     }
 }

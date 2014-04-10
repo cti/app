@@ -9,8 +9,9 @@
         "cti/direct": "Allow usage sencha direct transport"
     },
     "autoload": {
-        "psr-4": {
-            "Application\\" : "src/"
+        "psr-0": {
+            "Application\\" : "src/php/",
+            "Controller\\" : "src/php/"
         }
     },    
     "authors": [
