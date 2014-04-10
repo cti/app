@@ -1,3 +1,5 @@
 <?php
 
-echo 'Hello world!';
+$locator = include 'locator.php';
+
+$locator->getCore()->processWeb();

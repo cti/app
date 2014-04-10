@@ -3,9 +3,16 @@
     "description": "Empty application",
     "license": "MIT",    
     "require": {
-        "cti/di": "*",
-        "cti/direct": "*"
+        "cti/core": "*"
     },
+    "suggest": {
+        "cti/direct": "Allow usage sencha direct transport"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\" : "src/"
+        }
+    },    
     "authors": [
         {
             "name": "Dmitry.Krokhin",
