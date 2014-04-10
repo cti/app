@@ -1,4 +1,4 @@
 <?php
 
 $locator = include 'locator.php';
-$locator->getCore()->processWeb();
+$locator->getWeb()->process();

@@ -1,5 +1,7 @@
 <?php
 
+chdir(__DIR__);
+
 include '../../vendor/autoload.php';
 
 $locator = new Cti\Di\Locator;

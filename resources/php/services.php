@@ -1,5 +1,11 @@
 <?php
 
 return array(
-    'core' => 'Application\Core',
+
+    'web' => array(
+    	'Cti\Core\Web', 
+    	'controllers' => array(
+    		'/' => 'Controller\DefaultController'
+		)
+    )
 );
