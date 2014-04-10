@@ -11,6 +11,11 @@ class DefaultController
         echo 'Hello world!';
     }
 
+    function getHello($name = 'World')
+    {
+        echo sprintf("Hello, %s!", $name);
+    }
+
     function processChain(Web $web, $chain)
     {
         $string = 'Check you base location.<br/>No method found!<br/><br/>';
