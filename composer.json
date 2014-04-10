@@ -6,7 +6,8 @@
         "cti/core": "*"
     },
     "suggest": {
-        "cti/direct": "Allow usage sencha direct transport"
+        "cti/direct": "Allow usage sencha direct transport",
+        "cti/saprfc": "Integrate with SAP using RFC interface"
     },
     "autoload": {
         "psr-0": {
