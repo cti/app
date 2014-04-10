@@ -1,5 +1,5 @@
 <?php
 
 return array(
-    'core' => 'Application\Core'
+    'core' => 'Application\Core',
 );

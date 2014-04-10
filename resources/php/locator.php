@@ -4,7 +4,10 @@ include '../../vendor/autoload.php';
 
 $locator = new Cti\Di\Locator;
 
-$locator->load(__DIR__ . '/services.php');
-$locator->getManager()->getConfiguration()->load(__DIR__ . '/config.php');
+$services = __DIR__ . '/services.php';
+$locator->load($services);
+
+$configuration = __DIR__ . '/config.php';
+$locator->getManager()->getConfiguration()->load($configuration);
 
 return $locator;
