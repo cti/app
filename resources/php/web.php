@@ -1,4 +1,5 @@
 <?php
 
-$locator = include 'locator.php';
-$locator->getWeb()->process();
+$manager = include 'manager.php';
+
+$manager->get('Cti\Core\Web')->process();
