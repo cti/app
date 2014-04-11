@@ -7,4 +7,4 @@ Start with this commands:
 
     composer create-project cti/app project_name
     cd project_name
-    php -S 127.0.0.1:8000 resources/php/web.php
+    bin/server

@@ -3,7 +3,9 @@
     "description": "cti application",
     "license": "MIT",    
     "require": {
-        "cti/core": "*"
+        "cti/core": "*",
+        "symfony/finder": "*",
+        "symfony/console": "*"
     },
     "suggest": {
         "cti/direct": "Allow usage sencha direct transport",
@@ -12,6 +14,7 @@
     "autoload": {
         "psr-0": {
             "Bootstrap\\" : "src/php/",
+            "Command\\" : "src/php/",
             "Controller\\" : "src/php/"
         }
     },    

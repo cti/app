@@ -1,5 +1,10 @@
 <?php
 
-$manager = include 'manager.php';
+$locator = include 'locator.php';
 
-$manager->get('Cti\Core\Web')->process();
+if(strpos($_SERVER['REQUEST_URI'], '/public')===0) {
+    return false;
+}
+
+$locator->getWeb()->process();
+
