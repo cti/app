@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule (.*) resources/php/web.php
+RewriteRule (.*) resources/php/start-web.php

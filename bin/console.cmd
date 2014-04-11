@@ -1,2 +1,2 @@
 @echo off
-php resources/php/console.php %*
+php resources/php/start-console.php %*

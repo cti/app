@@ -5,7 +5,7 @@
 return array(
 
     // set locator root project path
-    'Cti\Core\ResourceLocator' => array(
+    'Cti\Core\Resource' => array(
         dirname(dirname(__DIR__)),
     ),    
 
