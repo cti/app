@@ -4,6 +4,7 @@
     "license": "MIT",    
     "require": {
         "cti/core": "*",
+        "cti/direct": "*",
         "symfony/console": "*"
 
     },
