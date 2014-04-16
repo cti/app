@@ -5,4 +5,6 @@ chdir(__DIR__);
 
 include '../../vendor/autoload.php';
 
-return Cti\Core\Application::create(__DIR__ . '/config.php');
+$application = Cti\Core\Application::create(__DIR__ . '/config.php');
+
+return $application;

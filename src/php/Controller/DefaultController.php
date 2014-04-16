@@ -22,14 +22,6 @@ class DefaultController
     }
 
     /**
-     * if you request GET /hello or /hello/somebody
-     */
-    function getHello($name = 'World')
-    {
-        echo sprintf("Hello, %s!", $name);
-    }
-
-    /**
      * if no method was found you can process request by yourseld
      * chain is url pieces delimited by /
      * you can inject any parameter (thanks to di)

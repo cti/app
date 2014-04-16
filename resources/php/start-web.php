@@ -5,5 +5,7 @@ if(strpos($_SERVER['REQUEST_URI'], '/public') === 0) {
 }
 
 $application = include 'application.php';
-$application->getLocator()->getWeb()->run();
-
+$application
+    ->inject('Cti\Core\Extension\WebExtension')
+    ->inject('Cti\Direct\Extension')
+    ->getLocator()->getWeb()->run();

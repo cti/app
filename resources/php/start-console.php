@@ -1,4 +1,6 @@
 <?php
 
 $application = include 'application.php';
-$application->getLocator()->getConsole()->run();
+$application
+    ->inject('Cti\Core\Extension\ConsoleExtension')
+    ->getLocator()->getConsole()->run();
