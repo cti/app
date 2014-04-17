@@ -2,16 +2,15 @@
 
 namespace Extension;
 
-use Cti\Core\Application;
 use Symfony\Component\Filesystem\Filesystem;
 
 class AsseticExtension
 {
     /**
      * @inject
-     * @var Cti\Core\Resource
+     * @var Cti\Core\Application
      */
-    protected $resource;
+    protected $application;
 
     public function buildJavascript($script)
     {
@@ -20,9 +19,9 @@ class AsseticExtension
         foreach(array_reverse($this->getDependencyList($script)) as $coffee) {
 
             $javascript = null;
-            foreach(array('src', 'resources') as $src) {
-                if(strpos($coffee, $this->resource->path("$src coffee")) === 0) {
-                    $script_path = substr($coffee, strlen($this->resource->path("$src coffee")) + 1);
+            foreach(array('src', 'resource') as $src) {
+                if(strpos($coffee, $this->application->getPath("$src coffee")) === 0) {
+                    $script_path = substr($coffee, strlen($this->application->getPath("$src coffee")) + 1);
                     $dir = dirname($script_path);
                     $name = basename($script_path, '.coffee');
                     $path = "build js";
@@ -30,7 +29,7 @@ class AsseticExtension
                         $path .= " $dir";
                     }
                     $path .= " $name.js";
-                    $javascript = $this->resource->path($path);
+                    $javascript = $this->application->getPath($path);
                 }
             }
 
@@ -49,7 +48,7 @@ class AsseticExtension
             $result .= file_get_contents($javascript) . PHP_EOL;
         }
 
-        $file = $this->resource->path('public js ' . basename($script, '.coffee') .'.js');
+        $file = $this->application->getPath('public js ' . basename($script, '.coffee') .'.js');
 
         $fs = new Filesystem;
         $fs->dumpFile($file, $result);
@@ -63,7 +62,7 @@ class AsseticExtension
         if(file_exists($script)) {
             $contents = file_get_contents($script);
         } else {
-            $file = $this->resource->path('resources coffee '. $script . '.coffee');
+            $file = $this->application->getPath('resource coffee '. $script . '.coffee');
             if(file_exists($file)) {
                 $script = $file;
                 $contents = file_get_contents($file);
@@ -72,7 +71,7 @@ class AsseticExtension
         $result[] = $script;
         foreach($this->getScriptDependencies($contents) as $class) {
             if(strpos($class, 'Ext.') !== 0) {
-                $file = $this->resource->path('src coffee ' . str_replace('.', ' ', $class) . '.coffee');
+                $file = $this->application->getPath('src coffee ' . str_replace('.', ' ', $class) . '.coffee');
                 if(!in_array($file, $result)) {
                     $result[] = $file;
                 }
