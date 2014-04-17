@@ -5,7 +5,9 @@
     "require": {
         "cti/core": "*",
         "cti/direct": "*",
-        "symfony/console": "*"
+        "kriswallsmith/assetic": "*",
+        "symfony/console": "*",
+        "symfony/filesystem": "*"
 
     },
     "suggest": {
