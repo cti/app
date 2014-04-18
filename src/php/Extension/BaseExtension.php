@@ -14,5 +14,4 @@ class BaseExtension
             ->extend('Cti\Direct\Extension')
         ;
     }
-    
 }

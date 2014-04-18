@@ -25,13 +25,18 @@ class DefaultController
      * if no method was found you can process request by yourseld
      * chain is url pieces delimited by /
      * you can inject any parameter (thanks to di)
-     * @param  Cti\Core\Web $web
-     * @param  string $chain
+     * @param Cti\Core\Web $web
+     * @param array $chain
      */
     function processChain(Web $web, $chain)
     {
-        $string = 'Check you base location.<br/>No method found!<br/><br/>';
-        $string .= 'Current base url: <b>%s</b><br/>Requested url: <b>%s</b>';
-        echo sprintf($string, $web->getUrl(), $web->getUrl(implode('/', $chain)));
+        $output = <<<VIEW
+    Check you base location.<br/>
+    No method found!<br/>
+    <br/>
+    Current base url: <b>%s</b><br/>
+    Requested url: <b>%s</b>
+VIEW;
+        echo sprintf($output, $web->getUrl(), $web->getUrl(implode('/', $chain)));
     }
 }
