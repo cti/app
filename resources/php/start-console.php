@@ -1,5 +1,13 @@
 <?php
 
-$application = include 'application.php';
+use Cti\Core\Application\Factory;
 
-$application->getConsole()->run();
+$root = dirname(dirname(__DIR__));
+
+include $root . '/vendor/autoload.php';
+chdir($root);
+
+Factory::create($root)
+    ->getApplication()
+    ->getConsole()
+    ->run();

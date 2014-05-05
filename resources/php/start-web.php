@@ -4,6 +4,14 @@ if(strpos($_SERVER['REQUEST_URI'], '/public') === 0) {
     return false;
 }
 
-$application = include 'application.php';
+use Cti\Core\Application\Factory;
 
-$application->getWeb()->run();
+$root = dirname(dirname(__DIR__));
+
+include $root . '/vendor/autoload.php';
+chdir($root);
+
+Factory::create($root)
+    ->getApplication()
+    ->getWeb()
+    ->run();
