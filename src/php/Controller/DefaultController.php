@@ -2,10 +2,10 @@
 
 namespace Controller;
 
-use Cti\Core\Web;
+use Cti\Core\Module\Web;
 
 /**
- * All your routings live in controllers
+ * All your routes live in controllers
  * Default controller mounts to /
  * Request consist of url and method (get, post). 
  * When add route to controller you must join this string
@@ -25,7 +25,7 @@ class DefaultController
      * if no method was found you can process request by yourseld
      * chain is url pieces delimited by /
      * you can inject any parameter (thanks to di)
-     * @param Cti\Core\Web $web
+     * @param Web $web
      * @param array $chain
      */
     function processChain(Web $web, $chain)

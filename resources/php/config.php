@@ -5,12 +5,12 @@
 return array(
 
     // set locator root project path
-    'Cti\Core\Resource' => array(
-        dirname(dirname(__DIR__)),
-    ),    
+    'Cti\Core\Module\Project' => array(
+        'path' => dirname(dirname(__DIR__)),
+    ),
 
     // set default base path
-    'Cti\Core\Web' => array(
+    'Cti\Core\Module\Web' => array(
         'base' => '/',
     ),
 
