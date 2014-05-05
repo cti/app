@@ -11,7 +11,7 @@ return array(
 
     // disable application generation on each request
     'Cti\Core\Application\Factory' => array(
-        'generate' => false,
+        'generate' => true,
     ),
 
     // set default base path
