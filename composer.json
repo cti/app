@@ -29,6 +29,8 @@
         }
     ],
     "scripts": {
-        "post-root-package-install": ["bin\\console deploy"]
+        "post-create-project-cmd": [
+            "bin\\console deploy"
+        ]
     }
 }
