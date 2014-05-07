@@ -9,14 +9,8 @@ return array(
         'path' => dirname(dirname(__DIR__)),
     ),
 
-    // disable application generation on each request
-    'Cti\Core\Application\Factory' => array(
-        'generate' => true,
-    ),
-
     // set default base path
     'Cti\Core\Module\Web' => array(
         'base' => '/',
     ),
-
 );

@@ -11,7 +11,6 @@
 
     },
     "suggest": {
-        "cti/direct": "Allow usage sencha direct transport",
         "cti/saprfc": "Integrate with SAP using RFC interface"
     },
     "autoload": {
@@ -20,7 +19,7 @@
             "Command\\" : "src/php/",
             "Controller\\" : "src/php/",
             "Direct\\" : "src/php/",
-            "Extension\\" : "src/php/"
+            "Module\\" : "src/php/"
         }
     },    
     "authors": [
