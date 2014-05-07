@@ -27,5 +27,8 @@
             "name": "Dmitry.Krokhin",
             "email": "nekufa@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-root-package-install": ["bin\\console deploy"]
+    }
 }
