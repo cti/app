@@ -55,13 +55,9 @@ class DefaultController
      */
     function processChain(Web $web, $chain)
     {
-        $output = <<<VIEW
-    Check you base location.<br/>
-    No method found!<br/>
-    <br/>
-    Current base url: <b>%s</b><br/>
-    Requested url: <b>%s</b>
-VIEW;
-        echo sprintf($output, $web->getUrl(), $web->getUrl(implode('/', $chain)));
+        $this->display('url', array(
+            'base' => $web->getUrl(),
+            'request' => $web->getUrl(implode('/', $chain)),
+        ));
     }
 }
