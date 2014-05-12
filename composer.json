@@ -3,7 +3,7 @@
     "description": "Simple application",
     "license": "MIT",    
     "require": {
-        "cti/core": "*",
+        "cti/core": "0.7.1",
         "cti/direct": "*",
         "kriswallsmith/assetic": "*",
         "symfony/console": "*",

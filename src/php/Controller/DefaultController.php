@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use Cti\Core\Module\Fenom;
 use Cti\Core\Module\Web;
 
 /**
@@ -16,9 +17,17 @@ class DefaultController
     /**
      * this method will be called when you request / with GET method
      */
-    function get()
+    function get(Fenom $fenom)
     {
-        echo 'This is index page!';
+        echo $fenom->render('index');
+    }
+
+    /**
+     * @param $name
+     * @param Fenom $fenom
+     */
+    function getHello(Fenom $fenom, $name = 'Dmitry') {
+        echo $fenom->render('hello', array('name' => $name));
     }
 
     /**
