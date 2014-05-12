@@ -8,26 +8,42 @@ use Cti\Core\Module\Web;
 /**
  * All your routes live in controllers
  * Default controller mounts to /
- * Request consist of url and method (get, post). 
+ * Request consist of method (get, post) and url.
  * When add route to controller you must join this string
  * @package Boostrap
  */
 class DefaultController
 {
     /**
-     * this method will be called when you request / with GET method
+     * @inject
+     * @var Fenom
      */
-    function get(Fenom $fenom)
+    protected $fenom;
+
+    /**
+     * displaying fenom template
+     * @param $template
+     * @param array $data
+     */
+    protected function display($template, $data = array())
     {
-        echo $fenom->render('index');
+        $this->fenom->display($template, $data);
     }
 
     /**
-     * @param $name
-     * @param Fenom $fenom
+     * this method will be called when you request / with GET method
      */
-    function getHello(Fenom $fenom, $name = 'Dmitry') {
-        echo $fenom->render('hello', array('name' => $name));
+    function get()
+    {
+        $this->display('index');
+    }
+
+    /**
+     * this method would be call when you request /hello or /hello/string
+     * @param $name
+     */
+    function getHello($name = 'Dmitry') {
+        $this->display('hello', array('name' => $name));
     }
 
     /**
