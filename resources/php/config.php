@@ -12,7 +12,6 @@ return array(
     'Cti\Core\Module\Web' => array(
         'base' => '/',
     ),
-    
 
     // add sencha direct support
     'Cti\Core\Application\Generator' => array(
