@@ -1,7 +1,6 @@
 <?php
 
-// all properties can be overriden in local.config.php
-// it is ignored by git, so this is your local configuration override
+// all properties can be overriden in local.config.php, it is ignored by git
 return array(
 
     // set locator root project path
@@ -13,4 +12,12 @@ return array(
     'Cti\Core\Module\Web' => array(
         'base' => '/',
     ),
+    
+
+    // add sencha direct support
+    'Cti\Core\Application\Generator' => array(
+        'modules' => array(
+            'direct' => 'Cti\Direct\Module'
+        )
+    )
 );
