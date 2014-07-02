@@ -16,7 +16,7 @@ return array(
     // add sencha direct support
     'Cti\Core\Application\Generator' => array(
         'modules' => array(
-            'direct' => 'Cti\Direct\Module'
+            'Cti\Direct\Direct'
         )
     )
 );
